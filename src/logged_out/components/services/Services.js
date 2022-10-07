@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import classNames from "classnames";
 import { CardActions, Button, Grid, Box, CardMedia, Typography, CardContent, Card, CardActionArea } from "@mui/material";
 import withStyles from "@mui/styles/withStyles";
-import useMediaQuery from "@mui/material/useMediaQuery";
+//import useMediaQuery from "@mui/material/useMediaQuery";
 
 
 
@@ -14,8 +14,8 @@ const styles = (theme) => ({
         marginLeft: theme.spacing(1),
         marginRight: theme.spacing(1),
         [theme.breakpoints.up("sm")]: {
-            marginLeft: theme.spacing(4),
-            marginRight: theme.spacing(4),
+            marginLeft: theme.spacing(0),
+            marginRight: theme.spacing(0),
         },
         maxWidth: 1280,
         width: "100%",
@@ -33,8 +33,8 @@ const styles = (theme) => ({
 
 const Services = (props) => {
     const { classes, selectServices, theme } = props;
-    const isWidthUpSm = useMediaQuery(theme.breakpoints.up("sm"));
-    const isWidthUpMd = useMediaQuery(theme.breakpoints.up("md"));
+    // const isWidthUpSm = useMediaQuery(theme.breakpoints.up("sm"));
+    // const isWidthUpMd = useMediaQuery(theme.breakpoints.up("md"));
 
     useEffect(() => {
         selectServices();
@@ -66,10 +66,10 @@ const Services = (props) => {
                             <CardActionArea>
                                 <CardMedia
                                     component="img"
-                                    height="140"
+                                    height="100"
                                     image="images/logged_out/timothy-hales-bennett-OwvRB-M3GwE-unsplash.jpg"
                                     alt="green iguana"
-                                    style={{ padding: 20 }}
+                                    style={{ padding: 10 }}
                                 />
                                 <CardContent>
                                     <Typography gutterBottom variant="h6" component="div" align="center">
@@ -92,10 +92,10 @@ const Services = (props) => {
                             <CardActionArea>
                                 <CardMedia
                                     component="img"
-                                    height="140"
+                                    height="100"
                                     image="images/logged_out/corinne-kutz-tMI2_-r5Nfo-unsplash.jpg"
                                     alt="green iguana"
-                                    style={{ padding: 20 }}
+                                    style={{ padding: 10 }}
                                 />
                                 <CardContent>
                                     <Typography gutterBottom variant="h6" component="div" align="center">
@@ -118,10 +118,10 @@ const Services = (props) => {
                             <CardActionArea>
                                 <CardMedia
                                     component="img"
-                                    height="140"
+                                    height="100"
                                     image="images/logged_out/domenico-loia-EhTcC9sYXsw-unsplash.jpg"
                                     alt="green iguana"
-                                    style={{ padding: 20 }}
+                                    style={{ padding: 10 }}
                                 />
                                 <CardContent>
                                     <Typography gutterBottom variant="h6" component="div" align="center">
@@ -145,10 +145,10 @@ const Services = (props) => {
                             <CardActionArea>
                                 <CardMedia
                                     component="img"
-                                    height="140"
+                                    height="100"
                                     image="images/logged_out/corinne-kutz-tMI2_-r5Nfo-unsplash.jpg"
                                     alt="green iguana"
-                                    style={{ padding: 20 }}
+                                    style={{ padding: 10 }}
                                 />
                                 <CardContent>
                                     <Typography gutterBottom variant="h6" component="div" align="center">
@@ -188,11 +188,7 @@ const Services = (props) => {
                         }}
                         >
                         <CardActionArea>
-                            <CardMedia
-                                component="img"
-                                height="140"
-                         
-                            />
+                        <img className="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img" height="140"/>
                             <div style={{ padding:20}}>
                             <CardContent style={{ backgroundColor:'#fff' }}>
                                 <Typography gutterBottom variant="h6" component="div" align="center">
@@ -221,10 +217,7 @@ const Services = (props) => {
                             backgroundRepeat: 'no-repeat'
                         }}>
                             <CardActionArea>
-                                <CardMedia
-                                    component="img"
-                                    height="140"
-                                />
+                            <img className="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img" height="140"/>
                                 <div style={{ padding:20}}>
                                 <CardContent  style={{ backgroundColor:'#fff' }}>
                                     <Typography gutterBottom variant="h6" component="div" align="center">
@@ -254,10 +247,7 @@ const Services = (props) => {
                             backgroundRepeat: 'no-repeat'
                         }}>
                             <CardActionArea>
-                                <CardMedia
-                                    component="img"
-                                    height="140"
-                              />
+                            <img className="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img" height="140"/>
                               <div style={{ padding:20}}>
                                 <CardContent style={{ backgroundColor:'#fff' }}>
                                     <Typography gutterBottom variant="h6" component="div" align="center">
@@ -287,10 +277,7 @@ const Services = (props) => {
                             backgroundRepeat: 'no-repeat'
                         }}>
                             <CardActionArea>
-                                <CardMedia
-                                    component="img"
-                                    height="140"
-                                />
+                            <img className="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img" height="140"/>
                                  <div style={{ padding:20}}>
                                 <CardContent style={{ backgroundColor:'#fff' }}>
                                     <Typography gutterBottom variant="h6" component="div" align="center">
@@ -327,4 +314,4 @@ Services.propTypes = {
     classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles, { withTheme: true })(Services);;
+export default withStyles(styles, { withTheme: true })(Services);

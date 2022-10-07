@@ -5,7 +5,6 @@ import {
   Typography,
   Box,
   IconButton,
-  Hidden,
   TextField,
 } from "@mui/material";
 import withStyles from "@mui/styles/withStyles";

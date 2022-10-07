@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import PropTypes from "prop-types";
 import classNames from "classnames";
-import { Grid, Box, CardMedia } from "@mui/material";
+import { Grid, Box } from "@mui/material";
 import withStyles from "@mui/styles/withStyles";
 import ContactForm from "./ContactForm";
 //import useMediaQuery from "@mui/material/useMediaQuery";
@@ -11,7 +11,7 @@ const styles = (theme) => ({
     ContactContentWrapper: {
         marginLeft: theme.spacing(1),
         marginRight: theme.spacing(1),
-        [theme.breakpoints.up("sm")]: {
+        [theme.breakpoints.up("sm")]: { 
             marginLeft: theme.spacing(4),
             marginRight: theme.spacing(4),
         },
@@ -44,7 +44,7 @@ function Contact(props) {
                 <Grid spacing={3}>
                     <Typography variant="h4" align="center" style={{ fontWeight:500 }}>Contact Us</Typography>
                 </Grid>
-                <div className={classNames("lg-p-top", classes.wrapper)} >
+                <div className={classNames(classes.wrapper)} style={{paddingTop:45}}>
           <div className={classNames("container-fluid", classes.container)} >
               <Box display="flex" justifyContent="center" className="row">
                 
@@ -160,12 +160,7 @@ function Contact(props) {
                       
                         <Grid item md={6} style={{  backgroundColor:"#fafbff" }}>
                         <ContactForm/>
-                        {/* <CardMedia component="img"
-                            image={`${process.env.PUBLIC_URL}/images/logged_out/about.png`}
-                            className={classes.image}
-                            alt="About image"
-                            
-                            /> */}
+                        
                         </Grid>
                       
                       

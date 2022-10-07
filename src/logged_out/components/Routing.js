@@ -1,6 +1,6 @@
 import React, { memo } from "react";
 import PropTypes from "prop-types";
-import { BrowserRouter, Link, Route, Switch } from "react-router-dom";
+import { Switch } from "react-router-dom";
 import PropsRoute from "../../shared/components/PropsRoute";
 import Home from "./home/Home";
 import Services from "./services/Services";
@@ -14,7 +14,7 @@ import useLocationBlocker from "../../shared/functions/useLocationBlocker";
 function Routing(props) {
   const { blogPosts, selectPortfolio, selectHome, selectAbout, selectServices, selectPrivacyPolicy, selectContact } = props;
 
-  useLocationBlocker();
+  useLocationBlocker(); 
   return (
     <Switch>
       {blogPosts.map((post) => (

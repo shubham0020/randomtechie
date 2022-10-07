@@ -1,5 +1,5 @@
 import React from "react";
-import { Grid, Box, Paper, Typography } from "@mui/material";
+import { Grid, Paper, Typography } from "@mui/material";
 import CodeIcon from "@mui/icons-material/Code";
 import BuildIcon from "@mui/icons-material/Build";
 import ComputerIcon from "@mui/icons-material/Computer";
@@ -14,7 +14,7 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 import { styled, withTheme } from "@mui/styles";
 import FeatureCard from "./FeatureCard";
 import useWidth from "../../../shared/functions/useWidth";
-import { CardCvcElement } from "@stripe/react-stripe-js";
+//import { CardCvcElement } from "@stripe/react-stripe-js";
 
 const iconSize = 35;
 
@@ -23,7 +23,7 @@ const Item = styled(Paper)(({ theme }) => ({
   ...theme.typography.body2,
   padding: theme.spacing(1),
   textAlign: 'center',
-  color: theme.palette.text.secondary,
+  color: theme.palette.text.secondary, 
 }));
 
 const features = [

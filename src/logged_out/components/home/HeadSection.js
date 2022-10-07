@@ -13,14 +13,12 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 // Import Swiper styles
 import 'swiper/swiper-bundle.min.css'
 import 'swiper/swiper.min.css'
-// import "swiper/css/zoom";
-// import "swiper/css/navigation";
-// import "swiper/css/pagination";
+
 
 //import "./styles.css";
 // import required modules
 import SwiperCore, { Zoom, Navigation, Pagination, Scrollbar, Autoplay } from "swiper";
-import { color } from "@mui/system";
+//import { color } from "@mui/system";
 
 SwiperCore.use([Autoplay, Pagination])
 

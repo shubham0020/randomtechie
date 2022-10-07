@@ -1,7 +1,7 @@
 import React, { useEffect , Fragment } from "react";
 import PropTypes from "prop-types";
 import classNames from "classnames";
-import { CardActions, Button, Grid, Box, CardMedia,Typography,CardContent,Card,CardActionArea } from "@mui/material";
+import { Button, Grid, Box, CardMedia,Typography } from "@mui/material";
 import withStyles from "@mui/styles/withStyles";
 
 import useMediaQuery from "@mui/material/useMediaQuery";
@@ -56,8 +56,8 @@ function About(props) {
     const { classes, selectAbout, theme } = props;
 
     const isWidthUpLg = useMediaQuery(theme.breakpoints.up("lg"));
-    const isWidthUpSm = useMediaQuery(theme.breakpoints.up("sm"));
-    const isWidthUpMd = useMediaQuery(theme.breakpoints.up("md"));
+    //const isWidthUpSm = useMediaQuery(theme.breakpoints.up("sm"));
+    //const isWidthUpMd = useMediaQuery(theme.breakpoints.up("md"));
 
     useEffect(() => {
         selectAbout();
@@ -69,14 +69,14 @@ function About(props) {
         <div className={classNames("lg-p-top", classes.wrapper)} style={{backgroundPosition: '70%',
         backgroundSize: 'small',
         backgroundRepeat: 'no-repeat', backgroundImage: "url('./hero-bg.png')"}}>
-          <div className={classNames("container-fluid", classes.container)}>
+          <div className={classNames( classes.container)}>
               <Box display="flex" justifyContent="center" className="row">
                 
                   <div className={classNames(classes.containerFix, "container")}>
                     <Box justifyContent="space-between" className="row" style={{ paddingTop: 10 }}>
 
                     
-                      <Grid item xs={12} md={5} style={{ /* backgroundColor:"#f6f9ff",*/ padding:10 }}>
+                      <Grid item xs={12} md={5} >
                         <Box
                           display="flex"
                           flexDirection="column"
@@ -144,7 +144,7 @@ function About(props) {
 
       
           <div className={classNames("lg-p-top", classes.wrapper)} >
-                <div className={classNames("container-fluid", classes.container)}>
+                <div className={classNames( classes.container)}>
                     <Box display="flex" justifyContent="center" className="row">
                       
                         <div className={classNames(classes.containerFix, "container")}>

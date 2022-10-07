@@ -2,13 +2,13 @@
 import React from "react";
 import { Grid, Box, Paper, Typography, CardMedia, Card } from "@mui/material";
 import { Swiper, SwiperSlide } from "swiper/react";
-import FormatQuoteIcon from '@mui/icons-material/FormatQuote';
+//import FormatQuoteIcon from '@mui/icons-material/FormatQuote';
 import calculateSpacing from "./calculateSpacing";
 import useMediaQuery from "@mui/material/useMediaQuery";
-import { styled, withTheme } from "@mui/styles";
+import { withTheme } from "@mui/styles";
 import 'swiper/swiper-bundle.min.css'
 import 'swiper/swiper.min.css'
-import SwiperCore, { Navigation, Pagination, Scrollbar, Autoplay } from "swiper";
+//import SwiperCore, { Navigation, Pagination, Scrollbar, Autoplay } from "swiper";
 import useWidth from "../../../shared/functions/useWidth";
 
 const iconSize = 20;
@@ -62,7 +62,7 @@ const data = [
 function Testimonial(props) {
     const { theme } = props;
     const width = useWidth();
-    const isWidthUpMd = useMediaQuery(theme.breakpoints.up("md"));
+    //const isWidthUpMd = useMediaQuery(theme.breakpoints.up("md"));
 
     return (
 
@@ -76,7 +76,7 @@ function Testimonial(props) {
                 <div className="container-fluid" >
                     <Grid container spacing={calculateSpacing(width, theme)} style={{ paddingLeft: 150, paddingRight: 50 }}>
                         <Swiper
-                            spaceBetween={100}
+                            spaceBetween={70}
                             slidesPerView={2}
                             autoplay={true}
                             pagination={{ clickable: true }}
@@ -86,7 +86,7 @@ function Testimonial(props) {
                             {data.map(user => (
                                 <SwiperSlide key={user.id} className="slide" >
 
-                                    <div style={{ padding: 30, border: " solid", borderColor: "#f1f1f1", marginBottom: 70, minHeight: 150 }}>
+                                    <div style={{ padding: 30, border: "2px solid", borderColor: "#f1f1f1",borderRadius:7, marginBottom: 70, height: 210, minHeight:50 }}>
 
                                         <CardMedia component="img" image={user.image} title="" alt="" style={{ height: 80, width: 80, position: "absolute", left: 20, borderRadius: 5, marginTop: -10 }} /><CardMedia />
                                         <div style={{ marginLeft: 85 }} >

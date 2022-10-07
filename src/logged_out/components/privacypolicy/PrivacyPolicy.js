@@ -4,7 +4,7 @@ import classNames from "classnames";
 import { Grid, Box } from "@mui/material";
 import withStyles from "@mui/styles/withStyles";
 
-import useMediaQuery from "@mui/material/useMediaQuery";
+//import useMediaQuery from "@mui/material/useMediaQuery";
 import Typography from "@mui/material/node/Typography";
 
 const styles = (theme) => ({
@@ -30,8 +30,8 @@ const styles = (theme) => ({
 function PrivacyPolicy(props) {
     const { classes, selectPrivacyPolicy, theme } = props;
 
-    const isWidthUpSm = useMediaQuery(theme.breakpoints.up("sm"));
-    const isWidthUpMd = useMediaQuery(theme.breakpoints.up("md"));
+    //const isWidthUpSm = useMediaQuery(theme.breakpoints.up("sm"));
+    //const isWidthUpMd = useMediaQuery(theme.breakpoints.up("md"));
 
     useEffect(() => {
         selectPrivacyPolicy();
