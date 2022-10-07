@@ -86,7 +86,7 @@ function Testimonial(props) {
                             {data.map(user => (
                                 <SwiperSlide key={user.id} className="slide" >
 
-                                    <div style={{ padding: 30, border: "2px solid", borderColor: "#f1f1f1",borderRadius:7, marginBottom: 70, height: 210, minHeight:50 }}>
+                                    <div style={{ padding: 30, border: "2px solid", borderColor: "#f1f1f1",borderRadius:7, marginBottom: 70, height: 220, minHeight:50,background: '#f7fbfe' }}>
 
                                         <CardMedia component="img" image={user.image} title="" alt="" style={{ height: 80, width: 80, position: "absolute", left: 20, borderRadius: 5, marginTop: -10 }} /><CardMedia />
                                         <div style={{ marginLeft: 85 }} >
